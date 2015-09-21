@@ -1,0 +1,17 @@
+
+	<div class="row" ng-init="viewListContacts()">
+	    <div class="col-lg-12">      
+		     <section class="content-header">
+			     <div class="btn-group pull-right" style="padding-bottom: 20px; ">
+			    	<button type="button" class="btn btn-success btn-flat" ng-click="viewAddContact()" ng-show="views.list">Agregar</button>
+	              	<button type="button" class="btn btn-success btn-flat" ng-click="viewListContacts()" ng-show="views.add || views.edit">Volver</button>
+			    </div>
+			    <h1 ng-show="views.list">Lista de Contactos</h1>
+			    <h1 ng-show="views.add">Agregar Contacto</h1>
+			    <h1 ng-show="views.edit">Editar Contacto</h1>
+			</section>
+
+			<div ng-include src="'app/components/contacts/_list.html'" ng-show="views.list"></div>
+	      	<div ng-include src="'app/components/contacts/_add.html'" ng-show="views.add || views.edit"></div>
+	    </div>
+	</div>

@@ -1,0 +1,25 @@
+
+  <div class="row" ng-init="viewListJobs()">
+      <div class="col-lg-12">
+          <section class="content-header">
+               <div class="btn-group pull-right" style="padding-bottom: 20px; ">
+                <button type="button" class="btn btn-success btn-flat" ng-click="viewAddJob()" ng-show="views.list">Agregar</button>
+                <button type="button" class="btn btn-success btn-flat" ng-click="viewListJobs()" ng-show="views.add || views.edit">Volver</button>
+              </div>
+              <h1 ng-show="views.list">Lista de Tareas</h1>
+              <h1 ng-show="views.add">Agregar Tarea</h1>
+              <h1 ng-show="views.edit">Editar Tarea</h1>
+          </section>
+          
+          <div ng-init="initMap()">
+            <ui-gmap-google-map center='map.center' zoom='map.zoom' events='map.events'>
+              <ui-gmap-markers models="mapMarkers" coords="'self'" icon="'icon'">
+              </ui-gmap-markers>
+            </ui-gmap-google-map>
+          </div>
+          
+          
+          <div ng-include src="'app/components/jobs/_list.html'" ng-show="views.list"></div>
+          <div ng-include src="'app/components/jobs/_add.html'" ng-show="views.add || views.edit"></div>
+      </div>
+  </div>

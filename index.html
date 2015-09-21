@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Reto Angular</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Bootstrap - CSS -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/loading-bar.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body ng-app="app">
+
+    <div class="container" ui-view>
+    </div> <!-- /container -->
+    <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/lodash/lodash.min.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>    
+    <script src="bower_components/angular-simple-logger/dist/index.js"></script>
+    <script src="bower_components/angular-google-maps/dist/angular-google-maps.min.js"></script>
+    
+    <script src="assets/libs/ngStorage.min.js"></script>
+    <script src="assets/libs/loading-bar.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/app.routes.js"></script>
+    <script src="app/apifactory.js"></script>
+    
+    <script src="app/components/login/LoginController.js"></script>
+    <script src="app/components/admin/AdminController.js"></script>
+    <script src="app/shared/header/HeaderController.js"></script>
+    <script src="app/components/contacts/ContactsController.js"></script>
+    <script src="app/components/jobs/JobsController.js"></script>    
+
+</body>
+</html>
